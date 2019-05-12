@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy:gh": "ng build --prood --base-href=https://github.com/Mochamadwildan/wildandeploy.git",
+    "heroku-postbuild": "ng build --prood"
   },
   "private": true,
   "dependencies": {
@@ -23,12 +25,14 @@
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.2.4",
-    "@angular/compiler-cli": "^4.0.0",
+    "@angular/cli": "^7.3.9",
+    "@angular/compiler-cli": "^4.4.7",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
